@@ -50,8 +50,9 @@ function playHadouken() {
 $(document).keydown(function(event){
 
 	if(event.which == 90){//while y is a mere variable 90 stands for the z key on the keyboard
-		$("ryu-still").hide();
-		$("ryu-ready").hide();
-		$("ryu-cool").show();
+		console.log("cool pose");
+		$(".ryu-still").hide();
+		$(".ryu-ready").hide();
+		$(".ryu-cool").show();
 	}
 });
