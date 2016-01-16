@@ -50,9 +50,22 @@ function playHadouken() {
 $(document).keydown(function(event){
 
 	if(event.which == 90){//while y is a mere variable 90 stands for the z key on the keyboard
-		console.log("cool pose");
+
 		$(".ryu-still").hide();
 		$(".ryu-ready").hide();
 		$(".ryu-cool").show();
 	}
+})
+.keyup(function(event){
+	greetings();//play the applauds sound
+	if(event.which == 90){
+		$(".ryu-still").show();
+		/*$(".ryu-ready").hide();*/
+		$(".ryu-cool").hide();
+	}
 });
+function greetings(){
+	$("#applaudise")[0].volume =1;
+	$("#applaudise")[0].load();
+	$("#applaudise")[0].play();
+}
